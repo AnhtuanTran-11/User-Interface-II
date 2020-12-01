@@ -49,11 +49,7 @@ table {
 
 /*CSS Styling*/
 
-/* Creates flexbox for the content in the about section */
-#topNav {
-    position: absolute;
-    margin: 20px;
-}
+/* Creates flex-box container for header */
 #headerContainer {
     display: flex;
     justify-content: flex-start;
@@ -62,37 +58,74 @@ table {
     height: 200px;
     width: 100%;
 }
-#headerContainer #topNav {
-align-content: flex-end;
+
+/* Creates flexbox for the content in the navigation bar */
+#topNav {
+    position: absolute;
+    margin: 20px;
 }
 
-#headerContainer #topNav a {
-    border: 1px solid black;
-    text-decoration: none;
-}
-
+/* Aligns my name to be centered about the navigation bar */
 #topNavName {
     align-self: center;
     font-size: 50px;
 }
 
+/* Aligns the top navigation bar to display at the bottom of header element */
+#headerContainer #topNav {
+align-content: flex-end;
+}
+
+/* Removes the underline for the links in the navigation bar */
+#headerContainer #topNav a {
+    border: 1px solid black;
+    text-decoration: none;
+}
+
+
+/* Creates and styles the container for the about section */
 #about #aboutContainer {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     text-align: center;
     justify-content: flex-start;
-    
+    width: 100%;
 }
 
+/* Aligns the side container in the about section to be centered */
+#about #aboutContainer #aboutSideContainer {
+    align-self: center;
+    flex-basis: 40%;
+}
+
+/* Sizes the image in the about section */
 #about #aboutContainer #aboutImage {
     margin: 20px;
+    width: 50%;
+    height: 100%;
+    object-fit: cover;
 }
 
+/* Re-aligns and re-sizes the content in the about section when screen size is under 880px */
+@media screen and (max-width: 880px) {
+    #about #aboutContainer {
+        flex-direction: column;
+    }
+    #about #aboutContainer #aboutImage {
+        margin: 20px auto;
+        width: 75%;
+    }
+}
+
+/* Position and adds padding to the button in the about section */
 button {
     padding: 10px;
+    margin: 20px;
+
 }
 
+/* Creates and styles the container for the projects section */
 #projects {
     display: flex;
     flex-wrap: wrap;
@@ -100,6 +133,7 @@ button {
     margin-top: 20px;
 }
 
+/* Styles and spaces out the individual content in the projects section */
 #projects div {
     border: 1px solid black;
     padding: 100px;
@@ -107,6 +141,7 @@ button {
     margin: 30px auto;
 }
 
+/* Creates and styles the container for the contact section */
 #contact {
     display: flex;
     justify-content: center;
@@ -114,4 +149,5 @@ button {
     flex-direction: column;
     height: 300px;
     background: whitesmoke;
+    text-align: center;
 }
