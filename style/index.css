@@ -51,17 +51,42 @@ table {
 
 /* Creates flexbox for the content in the about section */
 #topNav {
+    position: absolute;
+    margin: 20px;
+}
+#headerContainer {
     display: flex;
     justify-content: flex-start;
-    
-
+    align-items: flex-end;
+    background: salmon;
+    height: 200px;
+    width: 100%;
 }
+#headerContainer #topNav {
+align-content: flex-end;
+}
+
+#headerContainer #topNav a {
+    border: 1px solid black;
+    text-decoration: none;
+}
+
+#topNavName {
+    align-self: center;
+    font-size: 50px;
+}
+
 #about #aboutContainer {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     text-align: center;
     justify-content: flex-start;
+    
+}
+
+#about #aboutContainer #aboutImage {
+    margin: 20px;
 }
 
 button {
@@ -71,15 +96,22 @@ button {
 #projects {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-top: 20px;
 }
 
 #projects div {
     border: 1px solid black;
-    padding: 10px;
+    padding: 100px;
+    flex-basis: 10%;
+    margin: 30px auto;
 }
 
 #contact {
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-direction: column;
+    height: 300px;
+    background: whitesmoke;
 }
