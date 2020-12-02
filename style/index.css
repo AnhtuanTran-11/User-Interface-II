@@ -215,14 +215,22 @@ table {
   text-align: center;
   justify-content: flex-start;
   width: 100%;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+}
 
+/* Styles the text in the about section to be more narrow and centered */
+#about #aboutContainer p {
+  width: 50%;
+  text-align: center;
+  margin: 0 auto;
 }
 
 /* Changes the font size for my name in the about section */
 #aboutName {
   font-size: 50px;
   align-self: center;
+  font-weight: bold;
 }
 
 /* Styles the buttons in the about section */
@@ -237,7 +245,7 @@ table {
   color: white;
   background-color: #1d1d1d;
   align-self: center;
-  margin: 10px;
+  margin: 20px;
 }
 
 /* Aligns the side container in the about section to be centered */
@@ -315,11 +323,12 @@ table {
   height: 300px;
   background: whitesmoke;
   text-align: center;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
+  font-size: 30px;
 }
 
 /* Styles the footer button */
-  #footerButton {
+#footerButton {
   padding: 7px 25px;
   border-radius: 15px;
   border: none;
@@ -331,4 +340,4 @@ table {
   background-color: #1d1d1d;
   align-self: center;
   margin: 10px;
-  }
+}
