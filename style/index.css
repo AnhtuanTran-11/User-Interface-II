@@ -3,186 +3,287 @@
    License: none (public domain)
 */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
 }
 body {
-	line-height: 1;
+  line-height: 1;
 }
-ol, ul {
-	list-style: none;
+ol,
+ul {
+  list-style: none;
 }
-blockquote, q {
-	quotes: none;
+blockquote,
+q {
+  quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
 }
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 /*CSS Styling*/
 
 /* Creates flex-box container for header */
 #headerContainer {
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-end;
-    background: salmon;
-    height: 200px;
-    width: 100%;
-    background-color: #1D1D1D;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background: salmon;
+  height: 100%;
+  width: 100%;
+  background-color: #1d1d1d;
+  flex-direction: column;
 }
 
 /* Creates flexbox for the content in the navigation bar */
 #topNav {
-    position: absolute;
-    margin: 20px;
+  margin-bottom: 10px;
 }
 
 /* Aligns my name to be centered about the navigation bar */
 #topNavName {
-    align-self: center;
-    font-size: 100px;
-    color: white;
-    font-family: 'Allura', cursive;
-    text-rendering: geometricPrecision;
-    margin-left: 30px;
+  align-self: center;
+  font-size: 100px;
+  color: white;
+  font-family: "Allura", cursive;
+  text-rendering: geometricPrecision;
+  margin-left: 30px;
+  width: 100%;
 }
 
 /* Aligns the top navigation bar to display at the bottom of header element */
-#headerContainer #topNav {
-align-content: flex-end;
-}
 
 /* Removes the underline for the links in the navigation bar */
 #headerContainer #topNav a {
-    text-decoration: none;
+  text-decoration: none;
+  flex-shrink: 1;
 }
-
 
 /* Creates and styles the container for the about section */
 #about #aboutContainer {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    text-align: center;
-    justify-content: flex-start;
-    width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: flex-start;
+  width: 100%;
 }
 
 /* Aligns the side container in the about section to be centered */
 #about #aboutContainer #aboutSideContainer {
-    align-self: center;
-    flex-basis: 40%;
+  align-self: center;
+  flex-basis: 40%;
 }
 
 /* Sizes the image in the about section */
 #about #aboutContainer #aboutImage {
-    margin: 20px;
-    width: 50%;
-    height: 100%;
-    object-fit: cover;
-    opacity: 0.5;
-    box-shadow: 0 0 10px gray;
+  margin: 20px;
+  width: 50%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.5;
+  box-shadow: 0 0 10px gray;
 }
 
 /* Re-aligns and re-sizes the content in the about section when screen size is under 880px */
 @media screen and (max-width: 880px) {
-    #about #aboutContainer {
-        flex-direction: column;
-    }
-    #about #aboutContainer #aboutImage {
-        margin: 20px auto;
-        width: 75%;
-    }
+  #about #aboutContainer {
+    flex-direction: column;
+  }
+  #about #aboutContainer #aboutImage {
+    margin: 20px auto;
+    width: 75%;
+  }
+  #headerContainer {
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto;
+  }
+  #headerContainer #topNavName {
+    text-align: center;
+    align-self: center;
+    margin: 0 auto;
+  }
+
+  #topNav {
+    align-self: center;
+  }
+}
+
+@media screen and (max-width: 512px) {
+  #headerContainer #topNav a {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+  }
 }
 
 /* Position and adds padding to the button in the about section */
 #topNavButtons {
-    padding: 7px 25px;
-    border-radius: 15px;
-    border: none;
-    cursor: pointer;
-    text-align: center;
-    transition: all 0.5s;
-    display: inline-block;
-    text-rendering: geometricPrecision;
-    margin-left: 30px;
+  padding: 7px 25px;
+  border-radius: 15px;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.5s;
+  display: inline-block;
+  text-rendering: geometricPrecision;
+  margin-left: 30px;
 }
 
 #topNavButtons span {
-    cursor: pointer;
-    position: relative;
-    transition: 0.5s;
+  cursor: pointer;
+  position: relative;
+  transition: 0.5s;
 }
 
 #topNavButtons span:after {
-    content: '\00bb';
-    position: absolute;
-    opacity: 0;
-    top: 0;
-    right: -20px;
-    transition: 0.5s;
-  }
-  
-  #topNavButtons:hover span {
-    padding-right: 25px;
-  }
-  
-  #topNavButtons:hover span:after {
-    opacity: 1;
-    right: 0;
-  }
+  content: "\00bb";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+#topNavButtons:hover span {
+  padding-right: 25px;
+}
+
+#topNavButtons:hover span:after {
+  opacity: 1;
+  right: 0;
+}
 
 /* Creates and styles the container for the projects section */
 #projects {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-top: 20px;
 }
 
 /* Styles and spaces out the individual content in the projects section */
 #projects div {
-    border: 1px solid black;
-    flex-basis: 20%;
-    margin: 30px auto;
+  border: 1px solid black;
+  flex-basis: 20%;
+  margin: 30px auto;
 }
 
 /* Creates and styles the container for the contact section */
 #contact {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    height: 300px;
-    background: whitesmoke;
-    text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 300px;
+  background: whitesmoke;
+  text-align: center;
 }
