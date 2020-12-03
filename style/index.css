@@ -249,6 +249,10 @@ table {
   margin: 20px;
 }
 
+#aboutSideContainer #aboutButtons:hover {
+  background-color: lightslategrey;
+}
+
 /* Styles the text between the span to have a cursor */
 #aboutButtons span {
   cursor: pointer;
@@ -375,6 +379,11 @@ table {
   margin: 10px;
 }
 
+/* Changes the background color when hovered upon */
+#footerButton:hover {
+  background-color: lightslategrey;
+}
+
 /* Styles the text between the span to have a cursor */
 #footerButton span {
   cursor: pointer;
@@ -402,3 +411,4 @@ table {
   opacity: 1;
   right: 0;
 }
+
