@@ -249,6 +249,34 @@ table {
   margin: 20px;
 }
 
+/* Styles the text between the span to have a cursor */
+#aboutButtons span {
+  cursor: pointer;
+  position: relative;
+  transition: 0.5s;
+}
+
+/* Creates padding when hovered */
+#aboutButtons:hover span {
+  padding-right: 25px;
+}
+
+/* Styles and adds arrows after the span element */
+#aboutButtons span:after {
+  content: "\00bb";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+/* Returns the the button back to normal */
+#aboutButtons:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
 /* Aligns the side container in the about section to be centered */
 #about #aboutContainer #aboutSideContainer {
   align-self: center;
@@ -345,4 +373,32 @@ table {
   background-color: #1d1d1d;
   align-self: center;
   margin: 10px;
+}
+
+/* Styles the text between the span to have a cursor */
+#footerButton span {
+  cursor: pointer;
+  position: relative;
+  transition: 0.5s;
+}
+
+/* Creates padding when hovered */
+#footerButton:hover span {
+  padding-right: 25px;
+}
+
+/* Styles and adds arrows after the span element */
+#footerButton span:after {
+  content: "\00bb";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+/* Returns the the button back to normal */
+#footerButton:hover span:after {
+  opacity: 1;
+  right: 0;
 }
