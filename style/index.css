@@ -1,1 +1,414 @@
-/* Add CSS styling here */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* <<<<<<<<<<<<<<<<<< CSS Styling >>>>>>>>>>>>>>>>>> */
+
+/* <<<<<<<<<<<<<<<<<< Header >>>>>>>>>>>>>>>>>> */
+
+/* Creates flex-box container for header */
+#headerContainer {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background: salmon;
+  height: 100%;
+  width: 100%;
+  background-color: #1d1d1d;
+  flex-direction: column;
+}
+
+/* Creates space for the navigation bar */
+#topNav {
+  margin-bottom: 1.7rem;
+}
+
+/* Aligns my name to be centered about the navigation bar */
+#topNavName {
+  align-self: center;
+  font-size: 6rem;
+  color: white;
+  font-family: "Allura", cursive;
+  text-rendering: geometricPrecision;
+  margin-left: 5rem;
+  margin-top: 2rem;
+  width: 100%;
+}
+
+/* Position and styles the buttons in the header section */
+#topNavButtons {
+  padding: .6rem 2.2rem;
+  border-radius: 15px;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.5s;
+  display: inline-block;
+  text-rendering: geometricPrecision;
+  margin-left: 2.2rem;
+}
+
+/* Styles the text between the span element to display a curser */
+#topNavButtons span {
+  cursor: pointer;
+  position: relative;
+  transition: 0.5s;
+}
+
+/* Styles the buttons to move to the right and display arrows */
+#topNavButtons span:after {
+  content: "\00bb";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -2rem;
+  transition: 0.5s;
+}
+
+/* Styles the button to have padding on the right when hovered upon */
+#topNavButtons:hover span {
+  padding-right: 2.2rem;
+}
+
+/* Styles the content between the span element to return back to normal after hovered */
+#topNavButtons:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+/* Removes the underline for the links in the navigation bar */
+#headerContainer #topNav a {
+  text-decoration: none;
+}
+
+/* <<<<<<<<<<<<<<<<<< About section >>>>>>>>>>>>>>>>> */
+/* Creates and styles the container for the about section */
+#about #aboutContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: flex-start;
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.2rem;
+}
+
+/* Styles the text in the about section to be more narrow and centered */
+#about #aboutContainer p {
+  width: 50%;
+  text-align: center;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+
+/* Changes the font size for my name in the about section */
+#aboutName {
+  font-size: 3rem;
+  align-self: center;
+  font-weight: bold;
+}
+
+/* Styles the buttons in the about section */
+#aboutSideContainer #aboutButtons {
+  padding: 0.6rem 2.2rem;
+  border-radius: 15px;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.5s;
+  text-rendering: geometricPrecision;
+  color: white;
+  background-color: #1d1d1d;
+  align-self: center;
+  margin: 2rem;
+}
+
+#aboutSideContainer #aboutButtons:hover {
+  background-color: lightslategrey;
+}
+
+/* Styles the text between the span to have a cursor */
+#aboutButtons span {
+  cursor: pointer;
+  position: relative;
+  transition: 0.5s;
+}
+
+/* Creates padding when hovered */
+#aboutButtons:hover span {
+  padding-right: 2.5rem;
+}
+
+/* Styles and adds arrows after the span element */
+#aboutButtons span:after {
+  content: "\00bb";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -2rem;
+  transition: 0.5s;
+}
+
+/* Returns the the button back to normal */
+#aboutButtons:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+/* Aligns the side container in the about section to be centered */
+#about #aboutContainer #aboutSideContainer {
+  align-self: center;
+  flex-basis: 40%;
+}
+
+/* Sizes the image in the about section */
+#about #aboutContainer #aboutImage {
+  margin: 1.5rem;
+  width: 50%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.5;
+  box-shadow: 0 0 1rem gray;
+}
+
+/* Re-aligns and re-sizes the content in the header and about section when screen size is under 880px */
+@media screen and (max-width: 800px) {
+  #about #aboutContainer {
+    flex-direction: column;
+  }
+  #about #aboutContainer #aboutImage {
+    margin: 2rem auto;
+    width: 75%;
+  }
+  #headerContainer {
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto;
+  }
+  #headerContainer #topNavName {
+    text-align: center;
+    align-self: center;
+    margin: 0 auto;
+  }
+  #topNav {
+    align-self: center;
+  }
+}
+
+/* Re-aligns and resizes the elements in the nav bar and projects section when screen size is under 512px */
+@media screen and (max-width: 500px) {
+  #headerContainer #topNav a {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 3rem 1.5rem 0;
+  }
+  #projects div {
+    min-width: 33%;
+  }
+}
+
+/*<<<<<<<<<<<<<<<<<< Project section >>>>>>>>>>>>>>>>>>*/
+
+/* Creates and styles the container for the projects section */
+#projects {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-top: 5%;
+}
+
+/* Styles and spaces out the individual content in the projects section */
+#projects div {
+  border: 1px solid black;
+  flex-basis: 20%;
+  margin: 2.5rem auto;
+}
+
+/* <<<<<<<<<<<<<<<<<< Contact section >>>>>>>>>>>>>>>>>> */
+/* Creates and styles the container for the contact section */
+#contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 15rem;
+  background: whitesmoke;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-size: 2rem;
+}
+
+/* Styles the footer button */
+#footerButton {
+  padding: .6rem 2.2rem;
+  border-radius: 15px;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.5s;
+  text-rendering: geometricPrecision;
+  color: white;
+  background-color: #1d1d1d;
+  align-self: center;
+  margin: 1rem;
+}
+
+/* Changes the background color when hovered upon */
+#footerButton:hover {
+  background-color: lightslategrey;
+}
+
+/* Styles the text between the span to have a cursor */
+#footerButton span {
+  cursor: pointer;
+  position: relative;
+  transition: 0.5s;
+}
+
+/* Creates padding when hovered */
+#footerButton:hover span {
+  padding-right: 2.5rem;
+}
+
+/* Styles and adds arrows after the span element */
+#footerButton span:after {
+  content: "\00bb";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: 2rem;
+  transition: 0.5s;
+}
+
+/* Returns the the button back to normal */
+#footerButton:hover span:after {
+  opacity: 1;
+  right: 0;
+}
