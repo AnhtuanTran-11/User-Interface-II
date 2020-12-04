@@ -146,7 +146,7 @@ table {
 
 /* Creates space for the navigation bar */
 #topNav {
-  margin-bottom: 20px;
+  margin-bottom: 1.7rem;
 }
 
 /* Aligns my name to be centered about the navigation bar */
@@ -156,13 +156,14 @@ table {
   color: white;
   font-family: "Allura", cursive;
   text-rendering: geometricPrecision;
-  margin-left: 30px;
+  margin-left: 5rem;
+  margin-top: 2rem;
   width: 100%;
 }
 
 /* Position and styles the buttons in the header section */
 #topNavButtons {
-  padding: 7px 25px;
+  padding: .6rem 2.2rem;
   border-radius: 15px;
   border: none;
   cursor: pointer;
@@ -170,7 +171,7 @@ table {
   transition: all 0.5s;
   display: inline-block;
   text-rendering: geometricPrecision;
-  margin-left: 30px;
+  margin-left: 2.2rem;
 }
 
 /* Styles the text between the span element to display a curser */
@@ -186,13 +187,13 @@ table {
   position: absolute;
   opacity: 0;
   top: 0;
-  right: -20px;
+  right: -2rem;
   transition: 0.5s;
 }
 
 /* Styles the button to have padding on the right when hovered upon */
 #topNavButtons:hover span {
-  padding-right: 25px;
+  padding-right: 2.2rem;
 }
 
 /* Styles the content between the span element to return back to normal after hovered */
@@ -236,7 +237,7 @@ table {
 
 /* Styles the buttons in the about section */
 #aboutSideContainer #aboutButtons {
-  padding: 7px 25px;
+  padding: 0.6rem 2.2rem;
   border-radius: 15px;
   border: none;
   cursor: pointer;
@@ -246,7 +247,7 @@ table {
   color: white;
   background-color: #1d1d1d;
   align-self: center;
-  margin: 20px;
+  margin: 2rem;
 }
 
 #aboutSideContainer #aboutButtons:hover {
@@ -262,7 +263,7 @@ table {
 
 /* Creates padding when hovered */
 #aboutButtons:hover span {
-  padding-right: 25px;
+  padding-right: 2.5rem;
 }
 
 /* Styles and adds arrows after the span element */
@@ -271,7 +272,7 @@ table {
   position: absolute;
   opacity: 0;
   top: 0;
-  right: -20px;
+  right: -2rem;
   transition: 0.5s;
 }
 
@@ -289,12 +290,12 @@ table {
 
 /* Sizes the image in the about section */
 #about #aboutContainer #aboutImage {
-  margin: 20px;
+  margin: 1.5rem;
   width: 50%;
   height: 100%;
   object-fit: cover;
   opacity: 0.5;
-  box-shadow: 0 0 10px gray;
+  box-shadow: 0 0 1rem gray;
 }
 
 /* Re-aligns and re-sizes the content in the header and about section when screen size is under 880px */
@@ -303,7 +304,7 @@ table {
     flex-direction: column;
   }
   #about #aboutContainer #aboutImage {
-    margin: 20px auto;
+    margin: 2rem auto;
     width: 75%;
   }
   #headerContainer {
@@ -326,7 +327,7 @@ table {
   #headerContainer #topNav a {
     display: flex;
     flex-direction: column;
-    margin: 10px 30px 15px 0;
+    margin: 1rem 3rem 1.5rem 0;
   }
   #projects div {
     min-width: 33%;
@@ -347,7 +348,7 @@ table {
 #projects div {
   border: 1px solid black;
   flex-basis: 20%;
-  margin: 30px auto;
+  margin: 2.5rem auto;
 }
 
 /* <<<<<<<<<<<<<<<<<< Contact section >>>>>>>>>>>>>>>>>> */
@@ -366,7 +367,7 @@ table {
 
 /* Styles the footer button */
 #footerButton {
-  padding: 7px 25px;
+  padding: .6rem 2.2rem;
   border-radius: 15px;
   border: none;
   cursor: pointer;
@@ -376,7 +377,7 @@ table {
   color: white;
   background-color: #1d1d1d;
   align-self: center;
-  margin: 10px;
+  margin: 1rem;
 }
 
 /* Changes the background color when hovered upon */
@@ -393,7 +394,7 @@ table {
 
 /* Creates padding when hovered */
 #footerButton:hover span {
-  padding-right: 25px;
+  padding-right: 2.5rem;
 }
 
 /* Styles and adds arrows after the span element */
@@ -402,7 +403,7 @@ table {
   position: absolute;
   opacity: 0;
   top: 0;
-  right: -20px;
+  right: 2rem;
   transition: 0.5s;
 }
 
